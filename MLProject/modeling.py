@@ -18,7 +18,7 @@ load_dotenv()
 
 
 # Configuration
-DATA_PATH = "workflow-ci/MLProject/bank_transactions_preprocessing.csv"
+DATA_PATH = "bank_transactions_preprocessing.csv"
 EXPERIMENT_NAME = "fraud-detection"
 CONTAMINATION = 0.05
 RANDOM_STATE = 42
