@@ -42,7 +42,7 @@ jobs:
             -P contamination=0.05 \
             -P random_state=42 \
             -P n_estimators=100 \
-            -P dataset=MLProject/bank_transactions_preprocessing.csv
+            -P dataset=bank_transactions_preprocessing.csv
             
       # Commit Mlruns & Model Artifacts Back to Repo
       - name: Commit Artifacts to Repository
