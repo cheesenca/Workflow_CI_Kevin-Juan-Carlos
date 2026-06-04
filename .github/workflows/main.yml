@@ -50,11 +50,11 @@ jobs:
       # Commit Mlruns & Model Artifacts Back to Repo
       - name: Commit Artifacts to Repository
         run: |
-          mkdir -p mlruns models
+          mkdir -p mlruns models MLProject/models
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
-          git add mlruns/ models/ || true
+          git add mlruns/ models/ MLProject/models/ MLProject/models/isolation_forest/ || true
           git diff --cached --quiet || git commit -m "CI: Update mlruns and model artifacts"
           git push
         env:
@@ -94,7 +94,7 @@ jobs:
       - name: Get Model Run ID
         id: get_run_id
         run: |
-          RUN_ID=$(cat models/model_run_id.txt)
+          RUN_ID=$(cat MLProject/models/model_run_id.txt)
           echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
           echo "Run ID: $RUN_ID"
 
