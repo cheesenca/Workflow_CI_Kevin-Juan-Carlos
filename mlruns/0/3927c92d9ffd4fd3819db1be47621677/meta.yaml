@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow_CI_Kevin-Juan-Carlos/Workflow_CI_Kevin-Juan-Carlos/mlruns/0/3927c92d9ffd4fd3819db1be47621677/artifacts
+end_time: 1780555155046
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3927c92d9ffd4fd3819db1be47621677
+run_name: rogue-wren-788
+run_uuid: 3927c92d9ffd4fd3819db1be47621677
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780555091209
+status: 3
+tags: []
+user_id: runner
