@@ -112,14 +112,10 @@ def train_model(df, X_scaled, contamination=CONTAMINATION, random_state=RANDOM_S
     """
     Train Isolation Forest
     """
+    os.environ.pop("MLFLOW_RUN_ID", None)
     mlflow.autolog(log_models=True)
-    active_run = mlflow.active_run()
-    if active_run:
-        run_context = mlflow.start_run(run_id=active_run.info.run_id, nested=True)
-    else:
-        run_context = mlflow.start_run(run_name="isolation-forest-autolog")
-
-    with run_context as run:
+    
+    with mlflow.start_run(run_name="isolation-forest-autolog") as run:
         # Train model
         model = IsolationForest(
             contamination=contamination,
