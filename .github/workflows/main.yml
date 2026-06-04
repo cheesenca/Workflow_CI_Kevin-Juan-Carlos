@@ -34,7 +34,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mlflow==2.19.0 pandas numpy scikit-learn scipy matplotlib python-dotenv cloudpickle
+          pip install mlflow>=2.20.0 pandas numpy scikit-learn scipy matplotlib python-dotenv cloudpickle
 
       # Run MLflow Project
       - name: Fraud Detection
