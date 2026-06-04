@@ -38,7 +38,7 @@ jobs:
           DAGSHUB_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
           DAGSHUB_REPO: ${{ secrets.DAGSHUB_REPO }}
         run: |
-          mlflow run . --env-manager=local \
+          mlflow run MLProject/ --env-manager=local \
             -P contamination=0.05 \
             -P random_state=42 \
             -P n_estimators=100 \
