@@ -16,6 +16,8 @@ jobs:
   train:
     name: Train Model
     runs-on: ubuntu-latest
+    outputs:
+      run_id: ${{ steps.save_run_id.outputs.run_id }}
 
     steps:
       # Checkout Repository
@@ -46,6 +48,16 @@ jobs:
             -P random_state=42 \
             -P n_estimators=100 \
             -P dataset=bank_transactions_preprocessing.csv
+
+      # Save and Export Run ID
+      - name: Save and Export Run ID
+        id: save_run_id
+        run: |
+          mkdir -p MLProject/models
+          cp models/model_run_id.txt MLProject/models/model_run_id.txt
+          RUN_ID=$(cat models/model_run_id.txt)
+          echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
+          echo "Exported Run ID: $RUN_ID"
             
       # Commit Mlruns & Model Artifacts Back to Repo
       - name: Commit Artifacts to Repository
@@ -55,7 +67,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
           git add mlruns/ models/ MLProject/models/ MLProject/models/isolation_forest/ || true
-          git diff --cached --quiet || git commit -m "CI: Update mlruns and model artifacts"
+          git diff --cached --quiet || git commit -m "update mlruns and model artifacts"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -94,13 +106,21 @@ jobs:
       - name: Get Model Run ID
         id: get_run_id
         run: |
-          RUN_ID=$(cat MLProject/models/model_run_id.txt)
+          RUN_ID="${{ needs.train.outputs.run_id }}"
           echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
           echo "Run ID: $RUN_ID"
 
       # Build Docker Image using mlflow models build-docker
       - name: Build Docker Image via MLflow
+        env:
+          DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+          DAGSHUB_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
+          DAGSHUB_REPO: ${{ secrets.DAGSHUB_REPO }}
         run: |
+          export MLFLOW_TRACKING_URI="https://dagshub.com/${DAGSHUB_USERNAME}/${DAGSHUB_REPO}.mlflow"
+          export MLFLOW_TRACKING_USERNAME="${DAGSHUB_USERNAME}"
+          export MLFLOW_TRACKING_PASSWORD="${DAGSHUB_TOKEN}"
+ 
           mlflow models build-docker \
             --model-uri "runs:/${{ steps.get_run_id.outputs.run_id }}/model" \
             --name "${{ secrets.DOCKERHUB_USERNAME }}/fraud-detection-isolation-forest" \
