@@ -53,9 +53,7 @@ jobs:
       - name: Save and Export Run ID
         id: save_run_id
         run: |
-          mkdir -p MLProject/models
-          cp models/model_run_id.txt MLProject/models/model_run_id.txt
-          RUN_ID=$(cat models/model_run_id.txt)
+          RUN_ID=$(cat MLProject/models/model_run_id.txt)
           echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
           echo "Exported Run ID: $RUN_ID"
             
