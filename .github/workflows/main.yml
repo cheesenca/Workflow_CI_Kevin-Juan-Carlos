@@ -70,6 +70,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # Pull Latest Changes from Train Job
+      - name: Pull latest changes
+        run: git pull origin main
+
       # Setup Python & MLflow
       - name: Setup Python 3.10
         uses: actions/setup-python@v5
