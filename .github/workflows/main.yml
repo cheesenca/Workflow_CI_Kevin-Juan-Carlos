@@ -42,6 +42,9 @@ jobs:
           MLFLOW_TRACKING_URI: ${{ env.MLFLOW_TRACKING_URI }}
           MLFLOW_TRACKING_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
           MLFLOW_TRACKING_PASSWORD: ${{ secrets.DAGSHUB_TOKEN }}
+          DAGSHUB_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}  
+          DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}    
+          DAGSHUB_REPO: ${{ secrets.DAGSHUB_REPO }}  
         working-directory: MLProject
         run: |
           python modeling.py \
@@ -82,6 +85,7 @@ jobs:
       # Build Docker Image
       - name: Build Docker Image
         env:
+          MLFLOW_TRACKING_URI: ${{ env.MLFLOW_TRACKING_URI }}
           MLFLOW_TRACKING_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
           MLFLOW_TRACKING_PASSWORD: ${{ secrets.DAGSHUB_TOKEN }}
         run: |
