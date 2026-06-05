@@ -92,6 +92,7 @@ jobs:
           mlflow models build-docker \
             --model-uri "runs:/${{ steps.get_run_id.outputs.run_id }}/model" \
             --name "fraud-detection-isolation-forest" \
+            --env-manager local \
             --enable-mlserver
 
       # Login to Docker Hub
