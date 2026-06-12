@@ -42,16 +42,16 @@ jobs:
           MLFLOW_TRACKING_URI: ${{ env.MLFLOW_TRACKING_URI }}
           MLFLOW_TRACKING_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
           MLFLOW_TRACKING_PASSWORD: ${{ secrets.DAGSHUB_TOKEN }}
-          DAGSHUB_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}  
-          DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}    
-          DAGSHUB_REPO: ${{ secrets.DAGSHUB_REPO }}  
+          DAGSHUB_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
+          DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+          DAGSHUB_REPO: ${{ secrets.DAGSHUB_REPO }}
         working-directory: MLProject
         run: |
-          python modeling.py \
-            --contamination 0.05 \
-            --random_state 42 \
-            --n_estimators 100 \
-            --dataset bank_transactions_preprocessing.csv
+          mlflow run . \
+            -P contamination=0.05 \
+            -P random_state=42 \
+            -P n_estimators=100 \
+            -P dataset=bank_transactions_preprocessing.csv
 
       # Get Latest Run ID
       - name: Get Latest Run ID
