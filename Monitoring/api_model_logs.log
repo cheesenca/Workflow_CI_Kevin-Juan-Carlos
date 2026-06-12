@@ -1,0 +1,45 @@
+2026-06-12 11:58:12,743 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0341s
+2026-06-12 12:01:11,713 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, -1, 1]} | Response Time: 0.0389s
+2026-06-12 12:01:17,462 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0646s
+2026-06-12 12:16:56,815 - INFO - Request: 10 samples | Response: {'predictions': [-1, 1, 1, -1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0662s
+2026-06-12 12:17:00,429 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0289s
+2026-06-12 12:17:03,692 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0241s
+2026-06-12 16:40:06,548 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0935s
+2026-06-12 16:40:19,871 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0326s
+2026-06-12 16:40:22,641 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, -1, 1, 1, 1, 1, 1]} | Response Time: 0.0327s
+2026-06-12 16:40:26,388 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0389s
+2026-06-12 16:40:30,544 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, -1]} | Response Time: 0.0208s
+2026-06-12 16:40:34,692 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0395s
+2026-06-12 16:44:43,442 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0399s
+2026-06-12 16:44:46,211 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, -1, 1, 1, 1, 1]} | Response Time: 0.0453s
+2026-06-12 16:44:49,611 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, -1, 1, 1, 1, 1, 1]} | Response Time: 0.0637s
+2026-06-12 16:44:53,192 - INFO - Request: 10 samples | Response: {'predictions': [1, -1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0242s
+2026-06-12 16:44:55,925 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0429s
+2026-06-12 16:44:59,360 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, -1]} | Response Time: 0.0570s
+2026-06-12 16:45:05,273 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0445s
+2026-06-12 16:45:20,859 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0818s
+2026-06-12 16:47:27,978 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0334s
+2026-06-12 16:48:44,333 - INFO - Request: 10 samples | Response: {'predictions': [1, -1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0383s
+2026-06-12 16:48:47,008 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, -1]} | Response Time: 0.0659s
+2026-06-12 16:48:49,507 - INFO - Request: 10 samples | Response: {'predictions': [1, -1, 1, 1, -1, 1, 1, -1, 1, 1]} | Response Time: 0.0453s
+2026-06-12 16:48:52,090 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0352s
+2026-06-12 16:48:55,292 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0312s
+2026-06-12 16:48:57,829 - INFO - Request: 10 samples | Response: {'predictions': [-1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0216s
+2026-06-12 16:49:00,419 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, -1, 1, 1]} | Response Time: 0.0365s
+2026-06-12 16:49:02,941 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0258s
+2026-06-12 16:49:06,619 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, -1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0320s
+2026-06-12 16:49:09,516 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0502s
+2026-06-12 16:49:12,351 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0348s
+2026-06-12 16:49:15,831 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0445s
+2026-06-12 16:49:19,932 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, -1, 1, 1]} | Response Time: 0.0540s
+2026-06-12 16:50:43,729 - ERROR - Exception: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-06-12 16:51:01,293 - ERROR - Exception: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-06-12 16:51:06,053 - ERROR - Exception: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-06-12 16:51:34,065 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0248s
+2026-06-12 16:51:36,908 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, -1, 1, 1, 1, 1]} | Response Time: 0.0222s
+2026-06-12 16:51:40,430 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0330s
+2026-06-12 16:52:57,289 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0231s
+2026-06-12 16:53:00,348 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0399s
+2026-06-12 16:53:03,040 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0357s
+2026-06-12 16:53:05,844 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} | Response Time: 0.0212s
+2026-06-12 16:53:09,037 - INFO - Request: 10 samples | Response: {'predictions': [1, 1, 1, 1, 1, 1, -1, 1, 1, 1]} | Response Time: 0.0257s

@@ -1,0 +1,32 @@
+# Global configuration
+global:
+  scrape_interval: 5s       # Scrape targets every 5 seconds
+  evaluation_interval: 5s   # Evaluate rules every 5 seconds
+ 
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+ 
+# Load alerting/recording rules
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+ 
+# Scrape configurations
+scrape_configs:
+  # Scrape Prometheus itself
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+ 
+  # Scrape the fraud detection model exporter
+  - job_name: "fraud_detection_model_exporter"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["host.docker.internal:8000"]
+        labels:
+          model: "isolation_forest"
+          project: "fraud_detection"
