@@ -48,6 +48,7 @@ jobs:
         working-directory: MLProject
         run: |
           mlflow run . \
+            --env-manager local \
             -P contamination=0.05 \
             -P random_state=42 \
             -P n_estimators=100 \
